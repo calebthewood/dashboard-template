@@ -1,9 +1,15 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+
+/* UHERO Color Pallete, doublecheck againt style guide */
+:root {
+  --teal: rgb(28, 123, 148);
+  --grey: rgb(99, 99, 100);
+  --orange: rgb(249, 175, 33);
+  --aquamarine: rgb(142, 206, 212);
+  --green: rgb(170, 197, 108);
+  --violet: rgb(147, 122, 178);
+  --red: rgb(238, 49, 36);
+  --blue: rgb(88, 187, 210);
+  }
 
 .logo {
   height: 6em;
@@ -33,10 +39,3 @@
   }
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
