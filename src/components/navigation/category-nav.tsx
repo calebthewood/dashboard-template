@@ -1,17 +1,12 @@
 import { ReactNode } from "react";
 
-function CategoryNav(): ReactNode {
-
-    const categories = [
-        "energy",
-        "food",
-        "housing",
-        "education",
-        "climate",
-        "tourism",
-        "military",
-        "state"
-    ]
+function CategoryNav({
+    categories,
+    changeCategory
+}: {
+    categories: string[],
+    changeCategory: (i: number) => void
+}): ReactNode {
 
     return <>
         <ul className="list-none">
@@ -19,7 +14,7 @@ function CategoryNav(): ReactNode {
                 categories.map((category, i) => {
                     return (
                         <li key={Math.random() * (i + 1)} className="my-1">
-                            <button className="capitalize w-full px-2 text-left py-2 hover:bg-white">{category}</button>
+                            <button onClick={() => changeCategory(i)} className="capitalize w-full px-2 text-left py-2 hover:bg-slate-100 active:underline transition ease-in-out duration-100">{category}</button>
                         </li>
                     )
                 })
